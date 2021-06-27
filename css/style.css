@@ -1,0 +1,409 @@
+@charset "UTF-8";
+
+/*共通部分
+-------------------------------------------------------------*/
+html {
+    font-size: 100%;
+}
+body{
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+
+a{
+    text-decoration: none; /*<a>タグの傍線の指定*/
+}
+
+img{
+    max-width: 100%; /*画像の大きさ指定*/
+}
+
+/*見出し*/
+.page-title{
+    font-size: 5rem;
+    font-family: 'Philosopher', serif; /*Philosopherが使えない時はserif*/
+    text-transform: uppercase; /*全て大文字にするやつ*/
+    font-weight: normal; /*フォントの太さ*/
+}
+
+/*ボタン*/
+.button{
+    font-size: 1.375rem;
+    background: #0bd;
+    color: #fff;
+    border-radius:  5px; /*四角形の角を丸めるためのプロパティ*/
+    padding: 18px 32px;
+}
+
+.button:hover{
+    background: #0090aa; /*カーソルをボタンに重ねたときの色を指定*/
+}
+
+/*大きな背景画像*/
+.big-bg{
+    background-size: cover;
+    background-position: center top;
+}
+
+
+/*   HEADER
+-------------------------------------------------------------*/
+.logo {
+    width: 210px;
+    margin-top: 14px;
+
+}
+
+.main-nav{
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase; /*テキストを全て大文字にする*/
+    margin-top: 34px;
+    list-style: none;
+}
+
+.main-nav li{
+    margin-left: 36px;
+}
+
+.main-nav a {
+    color: #432;
+}
+.main-nav a:hover{  /*「a:hover」対象にカーソルを合わせたとき*/
+    color: #0bd;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper{
+    max-width: 1100px; /*横幅最大1100pxの指定*/
+    margin: 0 auto; /*要素を囲むボックスを中央に配置*/
+    padding: 0 4%; /*スマートフォン向け余白の指定*/
+}
+
+/*HOME
+-----------------------------------------------------------------*/
+
+#home{ /*home IDを使う*/
+    background-image:  url(file:///C:/Users/chihiro/OneDrive/%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88/WCBCafe/images/main-bg.jpg);
+    background-blend-mode: color-burn;
+    min-height: 100vh; /*height: 100vh → height: 100%で、コンテンツ量が画面サイズより大きい場合、heightではなくmin-heightで指定する*/
+}
+
+#home .page-title {
+    text-transform: none; /*テキストの大文字小文字全角の指定。noneは変更しない設定*/
+}
+
+.home-content {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.home-content p {
+    font-size: 1.125rem;
+    margin: 10px 0 42px;
+}
+
+/* NEWS
+------------------------------------------------------------*/
+
+#news{
+    background-image:url(file:///C:/Users/chihiro/OneDrive/%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88/WCBCafe/images/news-bg.jpg);
+    height: 270px;
+    margin-bottom: 40px;
+}
+
+#news .page-title{
+    text-align: center;
+}
+
+.news-contents{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+/* 記事部分 */
+article{
+    width: 74%;
+}
+
+.post-info{
+    position: relative;
+    padding-top: 4px;
+    margin-bottom: 40px;
+}
+
+.post-date{
+    background: #0bd;
+    border-radius: 50%; /*丸にする*/
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    font-size: 1.625rem;
+    text-align: center;
+    position: absolute; /*.post-infoからの絶対位置と調整の指定、日付を左上の部分に配置するため*/
+    top: 0;
+    padding-top: 10px;
+}
+
+.post-date span {
+    font-size: 1rem; /*2021のところ*/
+    border-top: 1px rgba(255,255,255,.5) solid;
+    padding-top: 6px;
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.post-title{
+    font-family: "Yu Mincho", "YuMincho", serif;
+    font-size: 2rem;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.post-title,
+.post-cat{
+    margin-left: 120px;
+}
+
+article img{
+    margin-bottom: 20px;
+}
+
+article p{
+    margin-bottom: 1rem;
+}
+
+/* サイドバー */
+aside{
+    width: 22%;
+}
+
+.aside p{
+    padding: 12px 10px;
+}
+
+.sub-title{
+    font-size: 1.375rem;
+    padding: 0 8 8px;
+    border-bottom: 2px #0bd solid;
+    font-weight: normal;
+}
+
+.sub-menu{
+    margin-bottom: 60px;
+    list-style: none;
+}
+
+.sub-menu li {
+    border-bottom: 1px #ddd solid;
+}
+
+.sub-menu a{
+    color: #432;
+    padding: 10px;
+    display: block; /*陸のクリックできる範囲を広げる*/
+}
+
+.sub-menu a:hover{
+    color: #0bd;
+}
+
+/* MENU
+-------------------------------------------------------------*/
+#menu {
+    background-image: url(file:///C:/Users/chihiro/OneDrive/%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88/WCBCafe/images/menu-bg.jpg);
+    min-height: 100vh;
+}
+
+.menu-content {
+    max-width: 560px;
+    margin-top: 10%;
+}
+.menu-content .page-title{
+    text-align: center;
+}
+
+.menu-content p {
+    font-size: 1.125rem;
+    margin: 10px 0 0;
+}
+.grid {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /*要素の幅が240pxよりは小さくならず、画面の幅に合わせて伸縮する、画面の幅に合わせて要素を折り返し*/
+    margin-top: 6%;
+    margin-bottom: 50px;
+}
+
+.grid p{
+    text-align: center;
+}
+
+/* CNTACT
+-------------------------------------------------------------*/
+#contact{
+    background-image: url(file:///C:/Users/chihiro/OneDrive/%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88/WCBCafe/images/contact-bg.jpg);
+    min-height: 100vh;
+}
+
+/* フォーム */
+form div{
+    margin-bottom: 14px;
+}
+label{
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea{
+    background: rgba(255,255,255,.5) ;/*フォームの半透明の指定*/
+    border: 1px #fff solid;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"]{
+    width: 100%;
+    max-width: 240px;
+}
+
+textarea{
+    width: 100%;
+    max-width: 480px;
+    height: 6rem;
+}
+
+input[type="submit"]{
+    border: none;
+    cursor: pointer; /*カーソルを当てたときのマウスの種類を指定*/
+    line-height: 1;
+    margin-top: 5%;
+    margin-bottom: 8%;
+}
+
+/* 店舗情報・地図*/
+#location{
+    padding: 4% 0;
+}
+
+#location .wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+}
+
+.location-info{
+    width: 22%;
+}
+
+.location-info p{
+    padding: 12px 10px;
+}
+
+.location-map{
+    width: 74%;
+}
+
+/*フッター
+-------------------------------------------------------------*/
+footer{
+    background: #432;
+    text-align: center;
+    padding: 26px 0;
+}
+
+footer p{
+    color: #fff;
+    font-size: 0.875rem;
+}
+
+/*モバイル版
+------------------------------------------------------------*/
+@media (max-width: 600px){
+    .page-title{
+        font-size: 2.5rem;
+    }
+
+    /* HEADER */
+    .main-nav{
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    .main-nav li{
+        margin: 0 20px;
+    }
+
+    .page-header{
+        flex-direction: column; /*要素を縦並び*/
+        align-items: center;
+    }
+
+    /* HOME */
+    .home-content {
+        margin-top: 20%;
+    }
+
+    /* NEWS */
+    .news-contents{
+        flex-direction: column;
+    }
+    article,
+    aside{
+        width: 100%;
+    }
+
+    #news .page-title{
+        margin-top: 30px;
+    }
+    aside{
+        margin-top: 60px;
+    }
+
+    .post-info{
+        margin-bottom: 30px;
+    }
+
+    .post-date{
+        width:70px;
+        height: 70px;
+        font-size: 1rem;
+    }
+
+    .post-date span{
+        font-size: 0.875rem;
+        padding-top: 2px;
+    }
+
+    .post-title{
+        font-size: 1.375rem;
+    }
+
+    .post-cat{
+        font-size: 0.875rem;
+        margin-top: 10px;
+    }
+
+    .post-title,
+    .post-cat{
+        margin-left: 80px;
+    }
+
+    /* MENU */
+    .menu-content{
+        margin-top: 20%;
+    }
+
+}
