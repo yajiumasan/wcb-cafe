@@ -89,7 +89,7 @@ img{
 -----------------------------------------------------------------*/
 
 #home{ /*home IDを使う*/
-    background-image:  url(file:///C:/Users/chihiro/OneDrive/%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88/WCBCafe/images/main-bg.jpg);
+    background-image:  url(https://github.com/yajiumasan/wcb-cafe/blob/main/images/main-bg.jpg?raw=true);
     background-blend-mode: color-burn;
     min-height: 100vh; /*height: 100vh → height: 100%で、コンテンツ量が画面サイズより大きい場合、heightではなくmin-heightで指定する*/
 }
